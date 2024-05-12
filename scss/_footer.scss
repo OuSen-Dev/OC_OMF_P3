@@ -1,0 +1,38 @@
+footer {
+    background-color: black;
+    color: white;
+    .footer__heading {
+      padding: 15px;
+      margin: 0;
+      padding: 15px 15px 0px 15px;
+    }
+    .footer__nav {
+      list-style: none;
+      padding-left: 15px;
+      margin: 16px 0px 0px 0px;
+      .nav__link {
+        padding-bottom: 5px;
+        .link__element {
+          padding-right: 5px;
+        }
+        .link__mail {
+          color: white !important;
+        }
+      }
+    }
+  }
+  
+  /* Animation Section */
+  
+  footer{
+    animation: load-hide 3s ease-in-out forwards;
+  }
+  
+  @keyframes load-hide {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

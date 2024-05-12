@@ -1,0 +1,91 @@
+@import "./variables";
+
+#restaurant {
+  background-color: $color-light-grey;
+  padding: 20px 15px 40px 15px;
+  margin: 40px 0px 0px 0px;
+  cursor: pointer;
+}
+
+.restaurant__button {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  background-color: $color-tertiary;
+  color: rgb(0, 141, 0);
+}
+
+.restaurant__card {
+  position: relative;
+  border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 15px 0px 15px 0px;
+  .card__image {
+    width: 100%;
+    max-width: 737px;
+    height: 160px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+  }
+  .card__new {
+    position: absolute;
+    top: 5%;
+    left: 72%;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    background-color: $color-tertiary;
+    color: rgb(0, 141, 0);
+  }
+  .card__caption {
+    padding: 15px 10px 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    .caption__text{
+      .text__title{
+        margin: 0px 0px 5px 0px;
+      }
+      .text__byline{
+        margin: 0;
+        color: grey;
+      }
+    }
+  }
+  .caption__heart{
+    .heart__empty{
+      margin-right: -20px;
+    }
+    .heart__full{
+      background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+      opacity: 0;
+      &:hover{
+        transition: 2s;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/* Animation Section */
+
+.restaurant__card{
+  animation: load-hide 3s ease-in-out forwards;
+}
+
+@keyframes load-hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
